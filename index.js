@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000
 
 const mongoose = require('mongoose');
 const databaseURI = 'mongodb+srv://herwi:miki108@cluster0-iypd8.mongodb.net/test?retryWrites=true';
@@ -62,4 +62,4 @@ app.delete('/users/:userId', (req, res) => {
     });
 });
 
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
